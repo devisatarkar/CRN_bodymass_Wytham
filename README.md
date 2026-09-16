@@ -45,8 +45,45 @@ Posterior draws can be used to reproduce figures (Code available at the end of e
 
 1.  df_chick_p.RDS (N = 4345 observations)
 
-id_num: unique numeric index for each individual (runs from 1 to N), id: unique identifier for each individual, birthyear: year in which individual hatched, birthyr_num: birthyear-specific numeric index, broodid: unique identifier for the brood an individual belongs to, brood_num: brood-specific numeric index, chickweight: weight of individual at 15 days old (response variable), april_birthlaydate: lay date (clutch initiation date) in april days (number of days since april 1st), natalbroodsize: number of hatched chicks in brood, natal_meantemp: Average daily temperature in ºC during developmental period (0-15 days old), natal_meanrain: Average daily rainfall in mm during developmental period (0-15 days old), absnatal_hd_mismatch: absolute difference between the half-fall date of winter moth larvae and the tenth day post-hatching of the focal individual, context_id: which context (birthyear x breeding year) the individual belongs to.
+- id_num: unique numeric index for each individual (runs from 1 to N)
+- id: unique identifier for each individual
+- birthyear: year in which individual hatched
+- birthyr_num: birthyear-specific numeric index
+- broodid: unique identifier for the brood an individual belongs to
+- brood_num: brood-specific numeric index
+- chickweight: weight in grams of individual at 15 days old (response variable)
+- april_birthlaydate: lay date (clutch initiation date) in april days (number of days since april 1st)
+- natalbroodsize: number of hatched chicks in brood
+- natal_meantemp: Average daily temperature in ºC during developmental period (0-15 days old)
+- natal_meanrain: Average daily rainfall in mm during developmental period (0-15 days old)
+- absnatal_hd_mismatch: absolute difference between the half-fall date of winter moth larvae and the tenth day post-hatching of the focal individual
+- context_id: which context (birthyear x breeding year) the individual belongs to
 
 2.  df_adult_p.RDS (6362 observations)
 
-id_num: unique numeric index for each individual from df_chick_p, id: unique identifier for each individual (these ids were nestlings in df_chick_p, and each row in df_adult_p corresponds to their subsequent breeding attempts), breedyear: year in which breeding attempt has occurred, breedyr_num: breeding year-specific numeric index, Pnum: unique identifier for each breeding attempt, breed_nestbox: nestbox in which breeding attempt has occurred, breedbox_num: nestbox-specific numeric index, adultweight: weight of individual during breeding attempt (response variable), april_laydate: lay date (clutch initiation date of brood produced by focal individual) in april days (number of days since april 1st), num_chicks: number of hatched chicks in brood produced in breeding attempt, breed_meantemp: Average daily temperature in ºC during developmental period of offspring (0-15 days old), breed_meanrain: Average daily rainfall in mm during developmental period of offspring (0-15 days old), age_years: age of breeding individual, sex_num: sex of breeding individual (0 if female, 1 if male), context_id: which context (birthyear x breeding year) the individual belongs to.
+- id_num: unique numeric index for each individual from df_chick_p
+- id: unique identifier for each individual (these ids were nestlings in df_chick_p, and each row in df_adult_p corresponds to their subsequent breeding attempts)
+- breedyear: year in which breeding attempt has occurred
+- breedyr_num: breeding year-specific numeric index
+- Pnum: unique identifier for each breeding attempt
+- breed_nestbox: nestbox in which breeding attempt has occurred
+- breedbox_num: nestbox-specific numeric index
+- adultweight: weight in grams of individual during breeding attempt (response variable)
+- april_laydate: lay date (clutch initiation date of brood produced by focal individual) in april days (number of days since april 1st)
+- breed_meantemp: Average daily temperature in ºC during developmental period of offspring (0-15 days old)
+- breed_meanrain: Average daily rainfall in mm during developmental period of offspring (0-15 days old)
+- num_chicks: number of hatched chicks in brood produced in breeding attempt
+- age_years: age of breeding individual
+- sex_num: sex of breeding individual (0 if female, 1 if male)
+- context_id: which context (birthyear x breeding year) the individual belongs to
+
+3.  gtbt_density_peryear.RDS (66 observations)
+
+- year: year of monitoring
+- popdens_bt_gt: number of breeding pairs of great tits and blue tits
+
+4.  ped_pruned.RDS (8633 observations)
+
+- id: unique identifier for each individual
+- dam: unique identifier for the mother
+- sire: unique identifier for the social father
