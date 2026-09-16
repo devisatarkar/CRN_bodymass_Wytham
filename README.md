@@ -2,6 +2,10 @@
 
 Data and R/Stan code for reproducing the analyses and figures in "***Strength of developmental carry-over varies continuously with environmental conditions in a wild bird population"***, examining developmental carry-over effects of body mass in great tits (*Parus major*) at Wytham Woods, Oxford, using the Covariance Reaction Norm (CRN) framework.
 
+All models run using:
+R v.4.3.3 https://www.r-project.org/
+CmdStanR v.0.9.0 https://mc-stan.org/cmdstanr/
+
 ## File list
 
 -   `Source Data:`contains files needed to run the R scripts for analysis. Main files include:
