@@ -6,10 +6,10 @@ Data and R/Stan code for reproducing the analyses and figures in "***Strength of
 
 -   `Source Data:`contains files needed to run the R scripts for analysis. Main files include:
 
-1.  df_chick_p.RDS — 4345 x 13 table, each row is an individual nestling, with natal information
-2.  df_adult_p.RDS — 6362 x 15 table, each row is a breeding attempt by an individual, with breeding attempt information
-3.  gtbt_density_peryear.RDS — population density (number of breeding pairs of great tits and blue tits) per year
-4.  ped_pruned.RDS — Pruned pedigree used to create relatedness matrix, with id, dam, and sire columns
+1.  df_chick_p.csv — 4345 x 13 table, each row is an individual nestling, with natal information
+2.  df_adult_p.csv — 6362 x 15 table, each row is a breeding attempt by an individual, with breeding attempt information
+3.  gtbt_density_peryear.csv — population density (number of breeding pairs of great tits and blue tits) per year
+4.  ped_pruned.csv — Pruned pedigree used to create relatedness matrix, with id, dam, and sire columns
 
 -   `Analyses (R scripts):`contains R scripts needed to run the CRN models:
 
