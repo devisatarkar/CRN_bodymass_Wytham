@@ -8,10 +8,10 @@ library(dplyr)
 # STEP 1 — Load dataframes
 # ══════════════════════════════════════════════════════════════════════════════
 
-df_chick_p <- readRDS("ENTERYOURDIRECTORY/df_chick_p.RDS")
-df_adult_p <- readRDS("ENTERYOURDIRECTORY/df_adult_p.RDS")
+df_chick_p <- read.csv("ENTERYOURDIRECTORY/df_chick_p.csv")
+df_adult_p <- read.csv("ENTERYOURDIRECTORY/df_adult_p.csv")
 
-gtbt_density_peryear <- readRDS("ENTERYOURDIRECTORY/gtbt_density_peryear.RDS")
+gtbt_density_peryear <- read.csv("ENTERYOURDIRECTORY/gtbt_density_peryear.csv")
 
 I_p <- n_distinct(df_chick_p$id_num) #number of individuals
 C_p <- n_distinct(df_adult_p$context_id) #number of contexts
