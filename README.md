@@ -17,13 +17,13 @@ CmdStanR v.0.9.0 https://mc-stan.org/cmdstanr/
 
 -   `Analyses (R scripts):`contains R scripts needed to run the CRN models:
 
-1.  DATA PREP.R — Uses `df_chick_p.RDS` / `df_adult_p.RDS` as inputs and builds the context key, context matrix, and stan data list for the CRN model in Stan
+1.  DATA PREP.R — Uses `df_chick_p.csv` / `df_adult_p.csv` as inputs and builds the context key, context matrix, and stan data list for the CRN model in Stan
 
 2.  Part 1 CRN MODEL.R — Main analysis R script for Part 1. Uses Stan file `crn_wytham_pairedcontext.stan`. Output (posterior draws) stored in `posterior_draws_part1.RDS`. Also contains code to reproduce Figure 2 using posterior draws.
 
 3.  Part 2 CRN MODEL.R — Main analysis R script for Part 2. Uses Stan file `crn_wytham_pairedcontext.stan`. Output (posterior draws) stored in `posterior_draws_mismatch.RDS`. Also contains code to reproduce Figure 3 using posterior draws.
 
-4.  Part 3 GENETIC CRN MODEL.R — Main analysis R script for Part 3. Uses Stan file `crn_wytham_genetic+nongenetic.stan`. Output (posterior draws) stored in `posterior_draws_genetic.RDS`. Also contains code to reproduce Figure 4 using posterior draws, create relatedness matrix using `ped_pruned.RDS`, and calculate heritability at mean environmental conditions.
+4.  Part 3 GENETIC CRN MODEL.R — Main analysis R script for Part 3. Uses Stan file `crn_wytham_genetic+nongenetic.stan`. Output (posterior draws) stored in `posterior_draws_genetic.RDS`. Also contains code to reproduce Figure 4 using posterior draws, create relatedness matrix using `ped_pruned.csv`, and calculate heritability at mean environmental conditions.
 
 -   `Models (Stan):` contains the main CRN statistical models:
 
@@ -47,7 +47,7 @@ Posterior draws can be used to reproduce figures (Code available at the end of e
 
 **Following are descriptions of the data files provided with the code. Only data explicitly required for running all the models have been provided. These data come from the long-term individual-based study of great tits in Wytham Woods, Oxfordshire, UK.**
 
-1.  df_chick_p.RDS (N = 4345 observations)
+1.  df_chick_p.csv (N = 4345 observations)
 
 - id_num: unique numeric index for each individual (runs from 1 to N)
 - id: unique identifier for each individual
@@ -63,7 +63,7 @@ Posterior draws can be used to reproduce figures (Code available at the end of e
 - absnatal_hd_mismatch: absolute difference between the half-fall date of winter moth larvae and the tenth day post-hatching of the focal individual
 - context_id: which context (birthyear x breeding year) the individual belongs to
 
-2.  df_adult_p.RDS (6362 observations)
+2.  df_adult_p.csv (6362 observations)
 
 - id_num: unique numeric index for each individual from df_chick_p
 - id: unique identifier for each individual (these ids were nestlings in df_chick_p, and each row in df_adult_p corresponds to their subsequent breeding attempts)
@@ -81,12 +81,12 @@ Posterior draws can be used to reproduce figures (Code available at the end of e
 - sex_num: sex of breeding individual (0 if female, 1 if male)
 - context_id: which context (birthyear x breeding year) the individual belongs to
 
-3.  gtbt_density_peryear.RDS (66 observations)
+3.  gtbt_density_peryear.csv (66 observations)
 
 - year: year of monitoring
 - popdens_bt_gt: number of breeding pairs of great tits and blue tits
 
-4.  ped_pruned.RDS (8633 observations)
+4.  ped_pruned.csv (8633 observations)
 
 - id: unique identifier for each individual
 - dam: unique identifier for the mother
