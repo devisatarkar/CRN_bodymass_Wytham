@@ -18,8 +18,8 @@ library(dplyr)
 
 # Load the pruned pedigree and the individual order to match
 # ══════════════════════════════════════════════════════════════════════════════
-ped_pruned <- readRDS(file.path(ENTERYOURDIRECTORY, "ped_pruned.RDS"))
-df_chick_p <- readRDS(file.path(ENTERYOURDIRECTORY, "df_chick_p.RDS"))
+ped_pruned <- read.csv(file.path(ENTERYOURDIRECTORY, "ped_pruned.csv"))
+df_chick_p <- read.csv(file.path(ENTERYOURDIRECTORY, "df_chick_p.csv"))
 
 # Build the pedigree index: row in ped_pruned for each id_num 1:I
 # ══════════════════════════════════════════════════════════════════════════════
